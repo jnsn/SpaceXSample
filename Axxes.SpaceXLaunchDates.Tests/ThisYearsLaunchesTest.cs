@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using TestStack.BDDfy;
 
 namespace Axxes.SpaceXLaunchDates.Tests
 {
@@ -7,7 +8,7 @@ namespace Axxes.SpaceXLaunchDates.Tests
         [Test]
         public void GetThisYearsLaunches()
         {
-            Execute();
+            this.BDDfy();
         }
 
         public void WhenIRequestThisYearsLaunches()

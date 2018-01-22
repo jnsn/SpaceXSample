@@ -7,7 +7,6 @@ using Moq;
 using NodaTime;
 using NodaTime.Testing;
 using RestSharp;
-using TestStack.BDDfy;
 
 namespace Axxes.SpaceXLaunchDates.Tests
 {
@@ -27,11 +26,6 @@ namespace Axxes.SpaceXLaunchDates.Tests
 
             _spaceXApiService = new Mock<ISpaceXApiService>();
             _spaceXApiService.Setup(x => x.GetAllLaunches()).Returns(restResponse.Object);
-        }
-
-        public void Execute()
-        {
-            this.BDDfy();
         }
 
         public void AndGivenASetOfLaunches()
